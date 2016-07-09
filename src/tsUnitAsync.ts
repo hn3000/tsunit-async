@@ -1,5 +1,5 @@
 
-///<reference path="./promise.d.ts" />
+/* ///<reference path="./promise.d.ts" /> */
 
 import {
     Test,
