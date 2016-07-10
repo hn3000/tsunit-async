@@ -9,3 +9,9 @@ See
 * [MS nodejstools #471](https://github.com/Microsoft/nodejstools/issues/471)
 
 for some of the reasons why this is necessary.
+
+TL;DR
+* npm only supports install from github where package.json is on the toplevel of the repo
+* git install always pulls down the complete repo
+* universal projects with VS and VS code / npm are more work
+
