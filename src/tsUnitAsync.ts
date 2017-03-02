@@ -124,6 +124,9 @@ export class TestAsync extends Test {
             return this;
         }, (err:any) => {
             this.errors.push(new TestDescription(testsGroupName, unitTestName, parameterSetIndex, err.toString()));
+            if (err instanceof TypeError) {
+                console.log(err);
+            }
             return this;
         });
     }

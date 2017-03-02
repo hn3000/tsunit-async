@@ -5,8 +5,8 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var tsUnit_1 = require('./tsUnit');
-var tsUnit_2 = require('./tsUnit');
+var tsUnit_1 = require("./tsUnit");
+var tsUnit_2 = require("./tsUnit");
 exports.Test = tsUnit_2.Test;
 exports.TestContext = tsUnit_2.TestContext;
 exports.TestClass = tsUnit_2.TestClass;
@@ -16,7 +16,7 @@ exports.TestDefinition = tsUnit_2.TestDefinition;
 var TestAsync = (function (_super) {
     __extends(TestAsync, _super);
     function TestAsync() {
-        _super.apply(this, arguments);
+        return _super.apply(this, arguments) || this;
     }
     TestAsync.prototype.runAll = function (tests, testRunLimiter) {
         var _this = this;
@@ -101,6 +101,9 @@ var TestAsync = (function (_super) {
             return _this;
         }, function (err) {
             _this.errors.push(new tsUnit_1.TestDescription(testsGroupName, unitTestName, parameterSetIndex, err.toString()));
+            if (err instanceof TypeError) {
+                console.log(err);
+            }
             return _this;
         });
     };

@@ -2,17 +2,21 @@
   "name": "@hn3000/tsunit-async",
   "version": "1.0.0",
   "description": "tsUnit with async tests",
+  "repository": {
+    "type":"git",
+    "url": "https://github.com/hn3000/tsunit-async.git"
+  },
   "main": "out/src/tsUnitAsync.js",
   "typings": "out/src/tsUnitAsync.d.ts",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^2.2.1"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "node out/test/allTests.js",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "pretest": "tsc",
-    "postinstall": "typings install"
+    "pretest": "tsc"
   },
   "author": "Steve Fenton",
   "contributors": [

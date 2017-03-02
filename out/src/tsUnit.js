@@ -9,7 +9,7 @@ var Test = (function () {
     function Test() {
         var testModules = [];
         for (var _i = 0; _i < arguments.length; _i++) {
-            testModules[_i - 0] = arguments[_i];
+            testModules[_i] = arguments[_i];
         }
         this.privateMemberPrefix = '_';
         this.passes = [];
@@ -451,7 +451,7 @@ exports.TestContext = TestContext;
 var TestClass = (function (_super) {
     __extends(TestClass, _super);
     function TestClass() {
-        _super.apply(this, arguments);
+        return _super.apply(this, arguments) || this;
     }
     TestClass.prototype.parameterizeUnitTest = function (method, parametersArray) {
         method.parameters = parametersArray;
